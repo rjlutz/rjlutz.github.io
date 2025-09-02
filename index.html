@@ -7,5 +7,16 @@
    <body>
       <h2>Project List</h2>
       <a href="project1.html">Project 1</a>
+            <div id="timer" style="margin-top:2em; font-size:1.2em; color:#2c3e50;">
+               Time since page load: <span id="seconds">0</span> seconds
+            </div>
+            <script>
+               let seconds = 0;
+               const secondsSpan = document.getElementById('seconds');
+               setInterval(() => {
+                  seconds++;
+                  secondsSpan.textContent = seconds;
+               }, 1000);
+            </script>
    </body>
 </html>
